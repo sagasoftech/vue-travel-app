@@ -15,7 +15,7 @@ const routes = [
 
   {path: '/panama', name: 'panama', component: ()=> import('@/views/Panama.vue')},
 
-  {path: '/destination/:id', component: ()=> import('@/views/DestinationShow.vue')}
+  {path: '/destination/:id', name: 'destination.show', component: ()=> import('@/views/DestinationShow.vue')}
 
 ]
 
