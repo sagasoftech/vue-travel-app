@@ -8,3 +8,11 @@
         <RouterLink to="/about">About</RouterLink>
     </div>
 </template>
+
+<style scoped>
+
+    #nav .vue-destination-active-link{
+        color:red;
+        border-bottom: 2px solid red;
+    }
+</style>
