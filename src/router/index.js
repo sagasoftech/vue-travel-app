@@ -5,7 +5,7 @@ import HomeView from '../views/HomeView.vue'
 const routes = [
   {path: '/', name: 'home', component: HomeView},
 
-  {path: '/destination/:id', name: 'destination.show', component: ()=> import('@/views/DestinationShow.vue')}
+  {path: '/destination/:id/:slug', name: 'destination.show', component: ()=> import('@/views/DestinationShow.vue')}
 
 ]
 
