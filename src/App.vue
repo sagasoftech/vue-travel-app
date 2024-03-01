@@ -3,16 +3,19 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <div id="nav">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/brazil">Brazil</RouterLink>
-        <RouterLink to="/hawaii">Hawaii</RouterLink>
-        <RouterLink to="/jamaica">Jamaica</RouterLink>
-        <RouterLink to="/panama">Panama</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-    </div>
+    <TheNavigation/>
     <br>
     <div class="container">
       <RouterView />
     </div>
 </template>
+
+
+<script>
+import TheNavigation from '@/components/TheNavigation.vue'
+
+export default {
+  components: {TheNavigation}
+}
+</script>
+
