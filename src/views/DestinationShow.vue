@@ -34,8 +34,6 @@ export default{
     //First time page load
     this.initData()
 
-    //subsequent rendering after click on links
-    this.$watch(() => this.$route.params, this.initData)
   }
 
 }

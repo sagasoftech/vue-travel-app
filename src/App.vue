@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <TheNavigation/>
     <br>
     <div class="container">
-      <RouterView />
+      <RouterView :key="$route.path"/>
     </div>
 </template>
 
