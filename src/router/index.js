@@ -38,9 +38,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   
-  routes,
-
-  linkActiveClass: 'vue-destination-active-link'
+  routes
 })
 
 export default router
