@@ -6,11 +6,27 @@
             <p>{{ destination.description }}</p>
         </div>
     </section>
+
+    <section class="experiences">
+        <h2>Top Exceriences in {{ destination.name }}</h2>
+
+        <div class="cards">
+            <ExperienceCard
+                v-for="experience in destination.experiences"
+                :key="experience.slug"
+                :experience="experience"
+            />
+        </div>
+    </section>
 </template>
 
 <script>
 import sourceData from '../data.json'
+import ExperienceCard from '@/components/ExperienceCard.vue'
+
 export default{
+
+  components: {ExperienceCard},
 
   props:{
       distinationid: {type: Number, required: true}
