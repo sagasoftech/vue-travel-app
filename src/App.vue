@@ -6,7 +6,11 @@ import { RouterLink, RouterView } from 'vue-router'
     <TheNavigation/>
     <br>
     <div class="container">
-      <RouterView :key="$route.path"/>
+      <RouterView v-slot="{Component}">
+        <transition name="slide" mode="out-in">
+          <component :is="Component" :key="$route.path"></component>
+        </transition>    
+      </RouterView>      
     </div>
 </template>
 
@@ -19,3 +23,14 @@ export default {
 }
 </script>
 
+<style lang="css">
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: opacity 1s, transform 1s;
+  }
+  .slide-enter-from,
+  .slide-leave-to {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+</style>
