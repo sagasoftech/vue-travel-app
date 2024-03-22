@@ -7,8 +7,9 @@ import { RouterLink, RouterView } from 'vue-router'
     <br>
     <div class="container">
       <RouterView v-slot="{Component}">
-        <!--<transition name="slide" mode="out-in"></transition>-->
-        <transition name="moveUp">
+        <!--<transition name="slide" mode="out-in">-->
+        <!--<transition name="moveUp">-->
+        <transition name="fade" mode="out-in">  
           <component :is="Component" :key="$route.path"></component>
         </transition>    
       </RouterView>      
@@ -38,6 +39,7 @@ export default {
 </style>
 -->
 
+<!--
 <style lang="css">
   .moveUp-enter-active{
     animation: fadeIn 1s ease-in;
@@ -56,5 +58,17 @@ export default {
   @keyframes moveUp {
     0% {transform: translateY(0);}
     100% {transform: translateY(-400px);}
+  }
+</style>
+-->
+
+<style lang="css">
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s;
+  }
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
   }
 </style>
